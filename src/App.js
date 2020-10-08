@@ -1,8 +1,9 @@
 import React from 'react';
+import { JumbotronContainer } from './containers/jumbotron';
 
 const App = () => {
   return (
-    <p>Hello React</p>
+    <JumbotronContainer />
   );
 }
 
