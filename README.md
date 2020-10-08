@@ -1,10 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This project follows from Karl Hadwen's Netflix Clone
- - [https://www.youtube.com/watch?v=x_EEwGe-a9o&list=WL&index=2&ab_channel=KarlHadwen](YouTube Video)
- - [https://github.com/karlhadwen/netflix](Git Repo)
+ - Youtube Video: https://www.youtube.com/watch?v=x_EEwGe-a9o&list=WL&index=2&ab_channel=KarlHadwen
+ - Git Repo: https://github.com/karlhadwen/netflix
 
-I Created it as a way to practice using React.
+I created this project as a way to practice React development. Includes: 
+ - Compond Componetns
+ - Styled Components
 
 ## Getting started
 
