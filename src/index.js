@@ -5,9 +5,15 @@ import 'normalize.css'
 import App from './App';
 import { GlobalStyles } from './global-styles';
 
-render( 
+import { FirebaseContext } from './context/firebase'
+import { firebase } from './lib/firebase.prod'
+
+
+render(
   <>
-    <GlobalStyles />
-    <App />
+    <FirebaseContext.Provider value={{ firebase }}>
+      <GlobalStyles />
+      <App />
+    </FirebaseContext.Provider>
   </>
-  , document.getElementById('root') );
+  , document.getElementById('root'));
