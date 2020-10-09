@@ -1,9 +1,10 @@
 import React from 'react'
+import { HeaderContainer } from '../containers/header';
 
 export default function Signin() {
   return (
-    <div>
+    <HeaderContainer>
       Hello from SignIn Page
-    </div>
+    </HeaderContainer>
   )
 }
