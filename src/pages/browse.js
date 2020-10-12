@@ -3,7 +3,7 @@ import React from 'react'
 export default function Browse() {
   return (
     <div>
-      Hello from SignIn Page
+      Hello from Browse Page
     </div>
   )
 }
