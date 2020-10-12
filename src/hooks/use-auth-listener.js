@@ -1,5 +1,4 @@
-import { auth } from 'firebase';
-import { useState, useEffect, UseContext, useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { FirebaseContext } from '../context/firebase';
 
 const AUTH_USER_KEY = 'netflix.user';
