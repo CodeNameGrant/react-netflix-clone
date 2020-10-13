@@ -6,6 +6,7 @@ import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
 export function BrowseContainer({ slides }) {
+  const [searchTerm, setSearchTerm] = useState('');
   const [profile, setProfile] = useState({})
   const [loading, setLoading] = useState(true);
 
@@ -31,6 +32,7 @@ export function BrowseContainer({ slides }) {
           </Header.Group>
 
           <Header.Group>
+            <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
@@ -53,6 +55,7 @@ export function BrowseContainer({ slides }) {
             In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society.
             He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
           </Header.Text>
+          <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
     </>

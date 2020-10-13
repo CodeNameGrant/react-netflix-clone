@@ -1,27 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
-import { Dropdown, 
-  Profile, 
-  Picture, 
-  Background, 
-  ButtonLink, 
-  Container, 
-  Logo, 
-  Feature, 
-  Text, 
-  FeatureCallOut, 
-  Link, 
-  Group } from './styles/header';
+import {
+  Dropdown,
+  Profile,
+  Picture,
+  Background,
+  ButtonLink,
+  Container,
+  Logo,
+  Feature,
+  Text,
+  FeatureCallOut,
+  Link,
+  Group,
+  Search,
+  SearchIcon,
+  SearchInput,
+  PlayButton
+} from './styles/header';
 
 export default function Header({ background = true, children, ...restProps }) {
-  return background 
-  ? <Background {...restProps}>{children}</Background>
-  : children;
+  return background
+    ? <Background {...restProps}>{children}</Background>
+    : children;
 }
 
 Header.Feature = function HeaderFeature({ children, ...restProps }) {
   return <Feature {...restProps}>{children}</Feature>
+}
+
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>
 }
 
 Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
@@ -38,6 +48,24 @@ Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
 
 Header.Picture = function HeaderPicture({ src, ...restProps }) {
   return <Picture src={`/images/users/${src}.png`} {...restProps} />
+}
+
+Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
+  const [searchActive, setSearchActive] = useState(false);
+
+  return (
+    <Search {...restProps}>
+      <SearchIcon onClick={() => setSearchActive(searchActive => !searchActive)}>
+        <img src='/images/icons/search.png' alt='search' />
+      </SearchIcon>
+      <SearchInput
+        value={searchTerm}
+        onChange={({ target }) => setSearchTerm(target.value)}
+        placeholder='Search films and series'
+        active={searchActive}
+      ></SearchInput>
+    </Search>
+  );
 }
 
 Header.Profile = function HeaderProfile({ children, ...restProps }) {
