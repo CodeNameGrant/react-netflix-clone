@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Footer } from '../components';
 
 export function FooterContainer() {
@@ -7,7 +7,7 @@ export function FooterContainer() {
       <Footer.Title>Questions? Contact Us.</Footer.Title>
       <Footer.Break />
       <Footer.Row>
-      <Footer.Column>
+        <Footer.Column>
           <Footer.Link href="#">FAQ</Footer.Link>
           <Footer.Link href="#">Investor Relations</Footer.Link>
           <Footer.Link href="#">Ways To Watch</Footer.Link>

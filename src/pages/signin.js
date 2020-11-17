@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FirebaseContext } from '../context/firebase';
 import { HeaderContainer } from '../containers/header';
@@ -26,13 +26,13 @@ export default function Signin() {
         // Push to Browse Page
         history.push(ROUTES.BROWSE);
       })
-      .catch(error => {
+      .catch((error) => {
         // console.log({error})
         setEmailAddress('');
         setPassword('');
         setError(error.message);
-      })
-  }
+      });
+  };
 
   return (
     <>
@@ -41,33 +41,36 @@ export default function Signin() {
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
 
-          <Form.Base onSubmit={handleSignIn} method='POST'>
+          <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
-              placeholder='Email Address'
+              placeholder="Email Address"
               value={emailAddress}
-              onChange={({ target }) => setEmailAddress(target.value)} />
+              onChange={({ target }) => setEmailAddress(target.value)}
+            />
 
             <Form.Input
-              type='password'
-              autocomplete='off'
-              placeholder='Password'
+              type="password"
+              autocomplete="off"
+              placeholder="Password"
               value={password}
-              onChange={({ target }) => setPassword(target.value)} />
+              onChange={({ target }) => setPassword(target.value)}
+            />
 
-            <Form.Submit type='submit' disabled={isInvalid}>Sign In</Form.Submit>
+            <Form.Submit type="submit" disabled={isInvalid}>
+              Sign In
+            </Form.Submit>
           </Form.Base>
 
           <Form.Text>
-            New to Netflix <Form.Link to='/signup'>Sign Up Now.</Form.Link>
+            New to Netflix <Form.Link to="/signup">Sign Up Now.</Form.Link>
           </Form.Text>
           <Form.TextSmall>
-            This page is protected by Google reCAPTCHA to ensure you're not a bot.
-            Learn More.
+            This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn More.
           </Form.TextSmall>
         </Form>
       </HeaderContainer>
 
       <FooterContainer />
     </>
-  )
+  );
 }

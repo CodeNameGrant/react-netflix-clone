@@ -1,22 +1,21 @@
-import React from 'react'
+import React from 'react';
 import * as ROUTES from '../constants/routes';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
 import { Header, Profiles } from '../components';
 
 export function SelectProfileContainer({ user, setProfile }) {
-
   const clickProfileItemHandler = () => {
     setProfile({
       displayName: user.displayName,
-      photoURL: user.photoURL
-    })
-  }
+      photoURL: user.photoURL,
+    });
+  };
 
   return (
     <>
       <Header background={false}>
         <Header.Frame>
-          <Header.Logo to={ROUTES.HOME} src={logo} alt='Netflix' />
+          <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
         </Header.Frame>
       </Header>
 

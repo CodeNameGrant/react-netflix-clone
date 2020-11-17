@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { HeaderContainer } from '../containers/header';
 import { JumbotronContainer } from '../containers/jumbotron';
 import { FaqContainer } from '../containers/faq';
@@ -14,7 +14,7 @@ export default function Home() {
           <Feature.SubTitle>Watch anywhere. Cancel at any time.</Feature.SubTitle>
 
           <OptForm>
-            <OptForm.Input placeholder='Email Address' />
+            <OptForm.Input placeholder="Email Address" />
             <OptForm.Button>Get Started!</OptForm.Button>
             <OptForm.Break />
             <OptForm.Text>Ready To Watch? Enter Your Email to create or restart your membership.</OptForm.Text>
@@ -26,5 +26,5 @@ export default function Home() {
       <FaqContainer />
       <FooterContainer />
     </>
-  )
+  );
 }

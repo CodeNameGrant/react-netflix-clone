@@ -18,17 +18,17 @@ const App = () => {
         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.SIGNUP}>
           <SignUp />
         </IsUserRedirect>
-        
+
         <ProtectedRoute user={user} path={ROUTES.BROWSE}>
           <Browse />
         </ProtectedRoute>
-        
+
         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.HOME}>
           <Home />
         </IsUserRedirect>
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;
